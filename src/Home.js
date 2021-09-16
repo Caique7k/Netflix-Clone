@@ -1,5 +1,6 @@
 import React from 'react';
 import { FooterContainer } from './containers/footer';
+import { FaqsContainer } from './containers/faqs';
 import { JumbotronContainer } from './containers/jumbotron';
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <>
       {' '}
       <JumbotronContainer />
+      <FaqsContainer />
       <FooterContainer />
     </>
   );
