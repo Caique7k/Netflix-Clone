@@ -29,17 +29,17 @@ export default () => {
 
   useEffect(() => {
     const scrollListener = () => {
-      if(window.scrollY > 10){
-        setBlackHeader(true)
-      }else{
-        setBlackHeader(false)
+      if (window.scrollY > 10) {
+        setBlackHeader(true);
+      } else {
+        setBlackHeader(false);
       }
-    }
+    };
     window.addEventListener('scroll', scrollListener);
     return () => {
       window.removeEventListener('scroll', scrollListener);
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <div className="page">
@@ -50,14 +50,15 @@ export default () => {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
-      <footer>
-      Netflix Clone. Designed and code by Caique Alves. 
-      </footer>
-      {movieList.length <= 0 &&
-      <div className="loading">
-        <img src="https://c.tenor.com/Rfyx9OkRI38AAAAM/netflix-netflix-startup.gif" alt="loading" />
-      </div>
-    }
+      <footer>Netflix Clone. Designed and code by Caique Alves.</footer>
+      {movieList.length <= 0 && (
+        <div className="loading">
+          <img
+            src="https://c.tenor.com/Rfyx9OkRI38AAAAM/netflix-netflix-startup.gif"
+            alt="loading"
+          />
+        </div>
+      )}
     </div>
   );
 };
